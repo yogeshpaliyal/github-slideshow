@@ -10,12 +10,12 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-    - run: | 
-        echo ${{ github.event.pull_request.title }} \n ${{ github.event.pull_request._links.html.href }}
+    # - run: | 
+    #     echo ${{ github.event.pull_request.title }} \n ${{ github.event.pull_request._links.html.href }}
       
-      # - uses: zentered/bluesky-post-action@v0.1.0
-      #   with:
-      #     post: ${{ github.event.pull_request.title }} \n ${{ github.event.pull_request.url }} ${{ github.event.pull_request.user.login }}
-      #   env:
-      #     BSKY_IDENTIFIER: ${{ secrets.BSKY_IDENTIFIER }}
-      #     BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
+      - uses: zentered/bluesky-post-action@v0.1.0
+        with:
+          post: ${{ github.event.pull_request.title }} \n ${{ github.event.pull_request._links.html.href }}
+        env:
+          BSKY_IDENTIFIER: ${{ secrets.BSKY_IDENTIFIER }}
+          BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
