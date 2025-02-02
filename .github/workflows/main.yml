@@ -15,7 +15,8 @@ jobs:
       
       - uses: zentered/bluesky-post-action@v0.1.0
         with:
-          post: ${{ github.event.pull_request.title }}\n${{ github.event.pull_request._links.html.href }}
+          post: ${{ github.event.pull_request.title }}
+                ${{ github.event.pull_request._links.html.href }}
         env:
           BSKY_IDENTIFIER: ${{ secrets.BSKY_IDENTIFIER }}
           BSKY_PASSWORD: ${{ secrets.BSKY_PASSWORD }}
