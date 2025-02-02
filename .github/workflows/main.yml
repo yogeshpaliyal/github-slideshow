@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo The PR was merged  ${{ github.event_name }} ${{ github.event.pusher.name }}
+        echo The PR was merged  ${{ github.event_name }} ${{ github.event.pull_request.title }} ${{ github.event.pull_request.url }} ${{ github.event.pull_request.user.login }}
 
