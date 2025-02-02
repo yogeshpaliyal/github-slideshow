@@ -1,0 +1,25 @@
+name: Create APK from Master
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    paths-ignore:
+      - 'fastlane/**'
+      - '.github/**'
+      - 'icons/**'
+      - 'images/**'
+      - 'scripts/**'
+      - 'whatsnew/**'
+      - '**.md'
+      - '**.MD'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+  
+    - name: Echo
+      run: echo github.push
