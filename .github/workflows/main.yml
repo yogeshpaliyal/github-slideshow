@@ -4,16 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - master
-    paths-ignore:
-      - 'fastlane/**'
-      - '.github/**'
-      - 'icons/**'
-      - 'images/**'
-      - 'scripts/**'
-      - 'whatsnew/**'
-      - '**.md'
-      - '**.MD'
+    - main
 
 jobs:
   build:
