@@ -13,4 +13,4 @@ jobs:
     - uses: actions/checkout@v4
   
     - name: Echo
-      run: echo Testing ${{ github.event_name }} ${{ github.event }}
+      run: echo Testing ${{ github.event_name }} ${{ github.event.push }}
