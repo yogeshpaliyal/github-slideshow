@@ -10,7 +10,7 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - uses: zentered/bluesky-post-action@v0.0.1
+      - uses: zentered/bluesky-post-action@v0.1.0
         with:
           post: The PR was merged  ${{ github.event_name }} ${{ github.event.pull_request.title }} ${{ github.event.pull_request.url }} ${{ github.event.pull_request.user.login }}
         env:
